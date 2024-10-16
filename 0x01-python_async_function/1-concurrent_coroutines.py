@@ -8,6 +8,12 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n, max_delay):
+    """
+    wait asynchronously multiple time for a random delay
+    :param n:
+    :param max_delay:
+    :return: list of tasks
+    """
     tasks = []
     async with asyncio.TaskGroup() as tg:
         for i in range(n):
