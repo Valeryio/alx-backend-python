@@ -8,7 +8,7 @@ from functools import reduce
 from typing import List
 
 
-def sum_mixed_list(mxd_lst: List[int | float]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """It computes the calculation of different number types
     param: mxd_lst
     return: a float
