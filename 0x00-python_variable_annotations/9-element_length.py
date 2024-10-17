@@ -4,10 +4,10 @@
 an iterable
 """
 
-from typing import Sequence, Iterable, Tuple
+from typing import Sequence, Iterable, Tuple, List
 
 
-def element_length(lst: Iterable[Sequence]) -> Tuple[Sequence, int]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """It manipulate an iterable
     param: lst
     return: a tuple
