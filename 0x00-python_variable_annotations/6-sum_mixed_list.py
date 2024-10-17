@@ -5,7 +5,7 @@ THis module contains a function that sums a complex list
 """
 
 from functools import reduce
-from typing import List
+from typing import List, Union
 
 
 def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
