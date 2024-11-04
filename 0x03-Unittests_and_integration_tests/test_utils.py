@@ -4,7 +4,9 @@
 the utils.py module
 """
 
+import utils
 import unittest
+from parameterized import parameterized
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -12,5 +14,14 @@ class TestAccessNestedMap(unittest.TestCase):
     module
     """
 
-    def test_access_nested_map(self):
-        pass
+    @parameterized.expand([
+        ({"a": 1}, ["a"], 1),
+        ({"a": {"b": 2}}, ["a"], {"b": 2}),
+        ({"a": {"b": 2}}, ["a", "b"], 2)
+        ])
+    def test_access_nested_map(self, nested_map, path, expected):
+        """This function tests the access_nested_map
+        method of the module
+        """
+        result = utils.access_nested_map(nested_map, path)
+        self.assertEqual(result, expected)
